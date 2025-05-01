@@ -1,0 +1,3 @@
+# robots.txt for Kevin's Konga Line
+User-agent: *
+Allow: /

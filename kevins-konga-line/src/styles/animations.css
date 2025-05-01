@@ -1,0 +1,51 @@
+/* Dance Card animations */
+@keyframes kongaDance {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.konga-dance {
+  animation: kongaDance 2s ease-in-out infinite;
+}
+
+/* Card fill animation */
+@keyframes cardFill {
+  0% { background-color: rgba(183, 161, 49, 0); }
+  50% { background-color: rgba(183, 161, 49, 0.4); }
+  100% { background-color: rgba(183, 161, 49, 0.2); }
+}
+
+.dance-card-fill {
+  animation: cardFill 1s forwards;
+}
+
+/* Number counter animation */
+@keyframes countUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.count-up {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(183, 161, 49, 0); }
+  50% { box-shadow: 0 0 20px rgba(183, 161, 49, 0.5); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* New member join animation */
+@keyframes joinPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.join-pop {
+  animation: joinPop 0.5s ease-out forwards;
+}

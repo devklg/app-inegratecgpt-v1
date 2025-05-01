@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mw-dark: #1a1a1a;
+  --mw-card: #2a2a2a;
+  --mw-gold: #b7a131;
+  --mw-blue: #3588ce;
+  --mw-darkblue: #118277;
+  --mw-red: #b72515;
+}
+
+body {
+  background-color: var(--mw-dark);
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@layer components {
+  .konga-card {
+    @apply bg-mw-card rounded-xl shadow-lg shadow-black/30 transition-all duration-300;
+  }
+  
+  .konga-card:hover {
+    @apply shadow-xl shadow-mw-gold/20 transform -translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-mw-blue text-white py-2 px-6 rounded-lg transition-all duration-300 hover:bg-mw-darkblue;
+  }
+  
+  .btn-gold {
+    @apply bg-mw-gold text-white py-2 px-6 rounded-lg transition-all duration-300 hover:bg-yellow-600;
+  }
+  
+  .magnificent {
+    @apply text-mw-gold font-bold;
+  }
+  
+  .stat-highlight {
+    @apply p-4 bg-black bg-opacity-50 rounded-lg;
+  }
+  
+  .stat-card {
+    @apply p-6 bg-gray-800 rounded-xl;
+  }
+  
+  .stat-item {
+    @apply p-4 rounded-lg bg-black bg-opacity-40 border border-gray-700;
+  }
+}
