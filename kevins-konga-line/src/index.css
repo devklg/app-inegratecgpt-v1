@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mw-dark: #1a1a1a;
+  --color-mw-card: #2a2a2a;
+  --color-mw-gold: #b7a131;
+  --color-mw-blue: #3588ce;
+  --color-mw-darkblue: #118277;
+  --color-mw-red: #b72515;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-mw-dark);
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-mw-card {
+    background-color: var(--color-mw-card);
+  }
+
+  .btn-primary {
+    @apply text-white py-2 px-6 rounded-lg transition-all duration-300;
+    background-color: var(--color-mw-blue);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-mw-darkblue);
+  }
+
+  .btn-gold {
+    @apply text-white py-2 px-6 rounded-lg transition-all duration-300;
+    background-color: var(--color-mw-gold);
+  }
+
+  .btn-gold:hover {
+    background-color: #d4af37;
+  }
+
+  .konga-card {
+    @apply rounded-xl shadow-lg shadow-black/30 transition-all duration-300;
+    background-color: var(--color-mw-card);
+  }
+
+  .konga-card:hover {
+    @apply shadow-xl transform -translate-y-1;
+    box-shadow: 0 8px 24px rgba(183, 161, 49, 0.2);
+  }
+
+  .magnificent {
+    color: var(--color-mw-gold);
+    font-weight: bold;
+  }
+
+  .stat-highlight {
+    @apply p-4 rounded-lg;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .stat-card {
+    @apply p-6 rounded-xl;
+    background-color: #1f2937;
+  }
+
+  .stat-item {
+    @apply p-4 rounded-lg border border-gray-700;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
